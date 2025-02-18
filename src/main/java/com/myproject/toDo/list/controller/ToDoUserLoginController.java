@@ -1,6 +1,4 @@
 package com.myproject.toDo.list.controller;
-
-
 import com.myproject.toDo.list.service.ToDoUserLoginService;
 import com.myproject.toDo.list.model.ToDoUserLogin;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +28,7 @@ public class ToDoUserLoginController {
         if (user != null) {
             return new ResponseEntity<>(user, HttpStatus.OK);
         } else {
+            System.out.println("test111");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
@@ -58,4 +57,3 @@ public class ToDoUserLoginController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
-
